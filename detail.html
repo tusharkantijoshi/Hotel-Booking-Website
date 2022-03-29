@@ -31,44 +31,54 @@
       <!-- Content Div -->
       <main>
 
-         <div class="hotel-img-container">
-            <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" alt="Hotel Image"
-               class="hotel-img">
-         </div>
+         <div class="first-flex">
 
-         <div class="form-container">
-            <form action="payment.html" method="get" autocomplete="off">
+            <div class="image">
+               <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg">
+            </div>
 
-               <div>
-                  <label for="adults">Adults:</label>
-                  <input type="number" id="adults" name="adults" min="1" required>
-               </div>
+            <div class="formDiv">
 
-               <div>
-                  <label for="name">Name:</label>
-                  <input type="text" id="name" name="name" required>
-               </div>
+               <form method="GET" action="payment.html" target="_self" autocomplete="off">
 
-               <div>
-                  <label for="fromDate">From Date</label>
-                  <input type="date" id="fromDate" name="fromDate" required>
-               </div>
+                  <ul>
 
-               <div>
-                  <label for="toDate">To Date</label>
-                  <input type="date" id="toDate" name="toDate" required>
-               </div>
+                     <li class="listSty">
+                        <label class="labelSty" for="adults">Adults:</label>
+                        <input class="inputSty" type="number" id="adults" value="1" min="1" name="adults" required></br>
+                     </li>
 
-               <div>
-                  <label for="total">Total:</label>
-                  <input type="number" id="total" name="total" disabled required>
-               </div>
+                     <li class="listSty">
+                        <label class="labelSty" for="name">Name: </label>
+                        <input class="inputSty" type="text" id="name" name="name" required /></br>
+                     </li>
 
-               <div>
-                  <button type="submit">Book Now</button>
-               </div>
+                     <li class="listSty">
+                        <label class="labelSty" for="fromDate">From Date:</label>
+                        <input class="inputSty" type="date" id="fromDate" name="fromDate" required /></br>
+                     </li>
 
-            </form>
+                     <li class="listSty">
+                        <label class="labelSty" for="toDate">To Date:</label>
+                        <input class="inputSty" type="date" id="toDate" name="toDate" required /></br>
+                     </li>
+
+                     <li class="listSty">
+                        <label class="labelSty" for="total">Total:</label>
+                        <input class="inputSty" type="number" id="total" name="total" readonly></br>
+                     </li>
+
+                     <li style="display: flex; padding: 1em; justify-content: center;">
+                        <a href="payment.html" target="_self">
+                           <button id="bookNow">Book Now</button> </a>
+                     </li>
+
+                  </ul>
+
+               </form>
+
+            </div>
+
          </div>
 
          <div class="description">
@@ -94,15 +104,15 @@
       <!-- Footer Div -->
       <footer>
 
-         <div><a href="contact.html">Contact Us</a></div>
+         <div class="contact"><a href="contact.html">Contact Us</a></div>
 
          <div class="copyright">
             <p>
-               2022 ROOM SEARCH PVT LTD
+               <span>&#169;</span> 2022 ROOM SEARCH PVT LTD
             </p>
          </div>
 
-         <div>
+         <div class="social">
             <a href="https://www.facebook.com/" target="_blank">
                <img src="assests/images/facebook.png" alt="Facebook Logo">
             </a>

@@ -37,11 +37,24 @@ footer {
 header img {
   height: 60px;
   width: 60px;
+  margin-left: 1%;
+}
+
+header a {
+  margin-right: 2%;
 }
 
 footer img {
   height: 20px;
   width: 22px;
+}
+
+.contact {
+  margin-left: 2%;
+}
+
+.social {
+  margin-right: 2%;
 }
 
 a {
