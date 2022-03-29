@@ -13,8 +13,10 @@
 
       <!-- Header Div -->
       <div>
-         <img src="assests/images/logo.png" alt="logo" style="height: 100px; width: 150px;">
-         <a href="login.html" target="_blank">Login</a>
+         <a href="index.html">
+            <img src="assests/images/logo.png" alt="logo" style="height: 100px; width: 150px;">
+         </a>
+         <a href="login.html">Login</a>
       </div>
 
       <!-- Content Div -->
@@ -26,7 +28,38 @@
          </div>
 
          <div>
-            <a href="payment.html">Book Now</a>
+            <form action="payment.html" method="get" autocomplete="off">
+
+               <div>
+                  <label for="adults">Adults:</label>
+                  <input type="number" id="adults" name="adults" min="1" required>
+               </div>
+
+               <div>
+                  <label for="name">Name:</label>
+                  <input type="text" id="name" name="name" required>
+               </div>
+
+               <div>
+                  <label for="fromDate">From Date</label>
+                  <input type="date" id="fromDate" name="fromDate" required>
+               </div>
+
+               <div>
+                  <label for="toDate">To Date</label>
+                  <input type="date" id="toDate" name="toDate" required>
+               </div>
+
+               <div>
+                  <label for="total">Total:</label>
+                  <input type="number" id="total" name="total" disabled required>
+               </div>
+
+               <div>
+                  <button type="submit">Book Now</button>
+               </div>
+
+            </form>
          </div>
 
          <div>
@@ -52,7 +85,7 @@
       <!-- Footer Div -->
       <div>
 
-         <div><a href="contact.html" target="_blank">Contact Us</a></div>
+         <div><a href="contact.html">Contact Us</a></div>
 
          <div>
             <a href="https://www.facebook.com/" target="_blank">
