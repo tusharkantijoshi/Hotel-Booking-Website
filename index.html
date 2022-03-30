@@ -14,17 +14,29 @@
    <!-- Font -->
    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
 
+   <!-- Bootstrap -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
    <title>Index</title>
 </head>
 
 <body>
-   <div class="container">
+   <div class="whole">
 
       <!-- Header Div -->
-      <header>
-         <img src="assests/images/logo.png" alt="logo">
-         <a href="login.html">Login</a>
-      </header>
+      <div class="header">
+         <div class="header">
+            <div id="h1"><img class="header-logo" src="assests/images/logo.png" alt="logo"></div>
+            <div id="h2">
+               <button type="button" class="btn btn-light btn-sm" data-toggle="modal" data-target="#staticBackdrop">
+                  LOGIN
+               </button>
+
+            </div>
+         </div>
+      </div>
 
       <!-- Content Div -->
       <main>
@@ -71,14 +83,18 @@
 
          </div>
 
-         <div><a href="#">View more >></a></div>
+         <div class="view-more"><a href="index.html" class="btn btn-secondary btn-lg active" role="button"
+               aria-pressed="true">View More</a></div>
 
       </main>
 
       <!-- Footer Div -->
-      <footer>
+      <div class="footer">
 
-         <div class="contact"><a href="contact.html">Contact Us</a></div>
+         <div class="contact">
+            <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#contactUsModal">Contact
+               Us</button>
+         </div>
 
          <div class="copyright">
             <p>
@@ -98,7 +114,74 @@
             </a>
          </div>
 
-      </footer>
+      </div>
+
+
+      <!-- Login Modal -->
+      <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+         aria-labelledby="staticBackdropLabel" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel">Please Login</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                  </button>
+               </div>
+               <div class="modal-body">
+                  <form>
+                     <div class="form-group row">
+                        <label for="username" class="col-sm-2 col-form-label">Username:</label>
+                        <div class="col-sm-10">
+                           <input type="text" class="form-control" id="username" required autocomplete="on"
+                              placeholder="Enter Username">
+                        </div>
+                     </div>
+                     <div class="form-group row">
+                        <label for="inputPassword" class="col-sm-2 col-form-label">Password:</label>
+                        <div class="col-sm-10">
+                           <input type="password" class="form-control" id="inputPassword" required autocomplete="off"
+                              placeholder="Enter Password">
+                        </div>
+                     </div>
+                  </form>
+               </div>
+               <div class="modal-footer" style="display: flex; justify-content: center;">
+                  <button type="submit" class="btn btn-primary">Login</button>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <!-- Contact US modal  -->
+      <div class="modal fade" id="contactUsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Get in touch</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                  </button>
+               </div>
+               <div class="modal-body">
+                  <p>Thank you for reaching out!!!</p>
+                  <p>Please enter your email and we will get back to you.</p>
+                  <form>
+                     <div class="form-group row">
+                        <label for="email" class="col-sm-2 col-form-label">Email:</label>
+                        <div class="col-sm-10">
+                           <input type="text" class="form-control" id="email" required autocomplete="on"
+                              placeholder="Enter your email id">
+                        </div>
+                     </div>
+                  </form>
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-primary">Submit</button>
+               </div>
+            </div>
+         </div>
+      </div>
 
    </div>
 </body>

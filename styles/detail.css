@@ -3,7 +3,7 @@ main {
   flex-direction: column;
   margin: 4%;
 }
-main > .first-flex > .image > img {
+.img {
   max-height: 350px;
   width: 400px;
 }
@@ -23,16 +23,16 @@ form {
   justify-content: center;
   max-height: 400px;
 }
-.image {
+.image-div {
   display: flex;
   flex-grow: 3;
   justify-content: center;
   align-items: center;
   border: 1px solid black;
 }
-.formDiv {
+.form-div {
   flex-grow: 1;
-  padding: 20px;
+  padding: 5px;
   border-left: 0px;
   border-top: 1px;
   border-right: 1px;
@@ -42,19 +42,11 @@ form {
 }
 .listSty {
   display: flex;
-  padding: 1em;
+  padding: 0.5em;
 }
 .labelSty {
   flex: 1;
 }
 .inputSty {
   width: 60%;
-}
-
-ul {
-  list-style: none;
-}
-
-button {
-  padding: 10px;
 }

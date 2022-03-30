@@ -1,7 +1,6 @@
 html,
 body {
   scroll-behavior: smooth;
-  overflow: auto;
   max-height: 100vh;
   min-height: 100vh;
   margin: 0;
@@ -9,13 +8,15 @@ body {
   font-family: "Ubuntu", sans-serif;
 }
 
-.container {
+.whole {
   max-height: 100vh;
   min-height: 100vh;
+  background-color: #e0e0e0;
+  font-family: "Ubuntu", sans-serif;
 }
 
-header,
-footer {
+.header,
+.footer {
   background-color: rosybrown;
   display: flex;
   align-items: center;
@@ -26,25 +27,28 @@ footer {
   z-index: 1;
 }
 
-header {
+.header {
   top: 0;
 }
 
-footer {
+.footer {
   bottom: 0;
 }
 
-header img {
+.header img {
   height: 60px;
   width: 60px;
   margin-left: 1%;
 }
 
-header a {
+.header > #h1 {
+  margin-left: 1%;
+}
+.header > #h2 {
   margin-right: 2%;
 }
 
-footer img {
+.footer img {
   height: 20px;
   width: 22px;
 }
