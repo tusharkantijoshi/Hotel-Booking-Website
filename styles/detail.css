@@ -3,10 +3,12 @@ main {
   flex-direction: column;
   margin: 4%;
 }
+
 .img {
   max-height: 350px;
   width: 400px;
 }
+
 form {
   margin-bottom: 1%;
   display: flex;

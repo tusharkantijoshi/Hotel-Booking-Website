@@ -69,3 +69,8 @@ a {
 .copyright {
   font-size: 10px;
 }
+
+.checked,
+.fa-star-half-full {
+  color: orange;
+}
