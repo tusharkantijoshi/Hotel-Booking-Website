@@ -32,3 +32,49 @@ main {
   margin: 2%;
   background-color: rosybrown;
 }
+
+@media screen and (max-width: 576px) {
+  .hotel-img-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: auto;
+    background-color: rgb(132, 136, 139);
+    margin-bottom: 4%;
+    margin-top: 4%;
+  }
+  .hotel-details {
+    padding: 4%;
+  }
+  .detail-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 90%;
+    margin-left: 2%;
+    margin-right: 2%;
+    background-color: rosybrown;
+    margin-bottom: 4%;
+  }
+  .pay {
+    align-self: center;
+    padding: 2%;
+  }
+
+  @media screen and (min-width: 576px) and (max-width: 768px) {
+    .hotel-img-container {
+      display: flex;
+      flex-direction: row;
+      width: 80%;
+      height: auto;
+      background-color: rgb(132, 136, 139);
+      margin-bottom: 4%;
+    }
+  }
+}
