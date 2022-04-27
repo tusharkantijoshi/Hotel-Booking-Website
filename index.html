@@ -6,10 +6,10 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <!-- Common CSS -->
-   <link rel="stylesheet" href="/styles/common.css">
+   <link rel="stylesheet" href="styles/common.css">
 
    <!-- CSS -->
-   <link rel="stylesheet" href="/styles/index.css">
+   <link rel="stylesheet" href="styles/index.css">
 
    <!-- Font -->
    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
@@ -45,54 +45,58 @@
 
       <!-- Content Div -->
       <main>
+         <section>
 
-         <div class="bg-img">
-            <div class="search">
-               <input type="search" name="city" id="city" placeholder="City">
-            </div>
-         </div>
-
-         <div class="city-img-container">
-
-            <div class="city-card">
+            <form class="city-search" action="">
+               <input type="text" placeholder="City" autocomplete="off" />
+            </form>
+            <div class="city-cards">
                <a href="list.html">
-                  <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/a2/new-delhi.jpg"
-                     alt="City Image 1" class="city-img">
-                  <div class="overlay">
-                     <div class="text">Delhi</div>
+                  <div class="image-container"> <img class="city-images"
+                        src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/a2/new-delhi.jpg" alt="Delhi" />
+                     <div class="overlay">Delhi</div>
                   </div>
                </a>
-            </div>
-
-            <div class="city-card">
-               <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fc/f0/goa.jpg" alt="City Image 2"
-                  class="city-img">
-               <div class="overlay">
-                  <div class="text">Goa</div>
+               <div class="image-container"> <img class="city-images"
+                     src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fc/f0/goa.jpg" alt="Goa" />
+                  <div class="overlay">Goa</div>
+               </div>
+               <div class="image-container"> <img class="city-images"
+                     src="https://media-cdn.tripadvisor.com/media/photo-s/0f/98/f7/df/charminar.jpg" alt="Hyderabad" />
+                  <div class="overlay">Hyderabad</div>
+               </div>
+               <div class="image-container"> <img class="city-images"
+                     src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/ac/kolkata-calcutta.jpg"
+                     alt="Kolkata" />
+                  <div class="overlay">Kolkata</div>
                </div>
             </div>
 
-            <div class="city-card">
-               <img src="https://media-cdn.tripadvisor.com/media/photo-s/0f/98/f7/df/charminar.jpg" alt="City Image 3"
-                  class="city-img">
-               <div class="overlay">
-                  <div class="text">Hyderabad</div>
+            <div class="city-cards" id="extra-cards">
+               <div class="image-container"> <img class="city-images"
+                     src="https://media-cdn.tripadvisor.com/media/photo-s/15/4d/46/b8/chennai-madras.jpg"
+                     alt="Chennai" />
+                  <div class="overlay">Chennai</div>
+               </div>
+               <div class="image-container"> <img class="city-images"
+                     src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fc/fc/agra.jpg" alt="Agra" />
+                  <div class="overlay">Agra</div>
+               </div>
+               <div class="image-container"> <img class="city-images"
+                     src="https://media-cdn.tripadvisor.com/media/photo-s/10/a3/3b/8a/screenshot-2017-09-12.jpg"
+                     alt="Jaipur" />
+                  <div class="overlay">Jaipur</div>
+               </div>
+               <div class="image-container"> <img class="city-images"
+                     src="https://media-cdn.tripadvisor.com/media/photo-s/0c/d2/2f/7a/palace-from-the-outside.jpg"
+                     alt="Bengaluru" />
+                  <div class="overlay">Bengaluru</div>
                </div>
             </div>
 
-            <div class="city-card">
-               <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/ac/kolkata-calcutta.jpg"
-                  alt="City Image 4" class="city-img">
-               <div class="overlay">
-                  <div class="text">Kolkata</div>
-               </div>
-            </div>
+            <p> <a class="btn btn-secondary" href="#" id="view-more">View More>></a> </p>
 
-         </div>
-
-         <div class="view-more"><a href="index.html" class="btn btn-secondary btn-lg active" role="button"
-               aria-pressed="true">View More</a></div>
-
+         </section>
       </main>
 
       <!-- Footer Div -->
