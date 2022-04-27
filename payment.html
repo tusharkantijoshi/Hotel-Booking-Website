@@ -10,6 +10,7 @@
 
    <!-- CSS -->
    <link rel="stylesheet" href="styles/payment.css">
+   <link rel="stylesheet" href="styles/loader.css">
 
    <!-- Font -->
    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
@@ -19,170 +20,49 @@
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
+
+   <!-- Scripts -->
+   <script src="scripts/common.js" defer></script>
+   <script src="scripts/payment.js" defer></script>
+
    <title>Payment</title>
 </head>
 
 <body>
-   <div class="whole">
+   <div id="loader"></div>
+   <div class="main-container">
+      <!-- Header -->
+      <header class="header-footer" id="header"></header>
 
-      <!-- Loader -->
-      <div class="loaderDiv">
-         <iframe src="loader.html">Doesn't support</iframe>
-      </div>
-
-
-      <!-- Header Div -->
-      <div class="header">
-         <div class="header">
-            <div id="h1">
-               <a href="index.html">
-                  <img class="header-logo" src="assests/images/logo.png" alt="logo">
-               </a>
-            </div>
-            <div id="h2">
-               <button type="button" class="btn btn-light btn-sm" data-toggle="modal" data-target="#staticBackdrop">
-                  LOGIN
-               </button>
-
+      <!-- Content -->
+      <div id="payment-container">
+         <div id="hotel-details">
+            <img class="hotel-image" id="hotel-image" alt="hotel-image">
+            <div class="hotel-name-rating">
+               <h2 id="hotel-name"></h2>
+               <p id="ranking"></p>
+               <p id="address"></p>
             </div>
          </div>
-      </div>
-
-      <!-- Content Div -->
-      <main>
-
-         <div class="hotel-img-container">
-
-            <div>
-               <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg"
-                  alt="Hotel Image" class="hotel-img">
+         <div id="customer-payment-details">
+            <div id="customer-details">
+               <p id="name"></p>
+               <p id="adult"></p>
+               <p id="from-date"></p>
+               <p id="to-date"></p>
             </div>
-            <div class="hotel-details">
-               <h2>Radisson Blu Hotel</h2>
-               <p>#38 of 1289 hotels in New Delhi</p>
-               <p>National Highway, 8, New Delhi 110017 India</p>
+            <div id="payment-details">
+               <p id="tariff"></p>
+               <p id="amount"></p>
             </div>
-
-
-         </div>
-
-         <div class="detail-container">
-
-            <div class="info">
-               <p><strong>Name: </strong>Tusharkanti Joshi</p>
-               <p><strong>Number of Adults: </strong>2</p>
-               <p><strong>Check in Date: </strong>06.06.2022</p>
-               <p><strong>Check out Date: </strong>08.06.2022</p>
-            </div>
-
-            <div class="tariff">
-               <p><strong>Tariff Breakdown: </strong>Rs 1000 x 2 Adults x 5 Nights</p>
-               <p><strong>Total Amount: </strong>Rs 10000</p>
-            </div>
-
-            <div class="pay">
-               <button type="button" class="btn btn-success" disabled>Pay Now</button>
-            </div>
-
-         </div>
-      </main>
-
-      <!-- Footer Div -->
-      <!-- Footer Div -->
-      <div class="footer">
-
-         <div class="contact">
-            <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#contactUsModal">Contact
-               Us</button>
-         </div>
-
-         <div class="copyright">
-            <p>
-               <span>&#169;</span> 2022 ROOM SEARCH PVT LTD
-            </p>
-         </div>
-
-         <div class="social">
-            <a href="https://www.facebook.com/" target="_blank">
-               <img src="assests/images/facebook.png" alt="Facebook Logo">
-            </a>
-            <a href="https://www.instagram.com/" target="_blank">
-               <img src="assests/images/instagram.png" alt="Instagram Logo">
-            </a>
-            <a href="https://www.twitter.com/" target="_blank">
-               <img src="assests/images/twitter.png" alt="Twitter Logo">
+            <a href="#" id="pay-now">
+               <button id="pay-now-button" type="button" class="btn btn-success" onclick="payNow(event)">Pay
+                  Now</button>
             </a>
          </div>
-
       </div>
-
-
-      <!-- Login Modal -->
-      <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
-         aria-labelledby="staticBackdropLabel" aria-hidden="true">
-         <div class="modal-dialog">
-            <div class="modal-content">
-               <div class="modal-header">
-                  <h5 class="modal-title" id="staticBackdropLabel">Please Login</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                     <span aria-hidden="true">&times;</span>
-                  </button>
-               </div>
-               <div class="modal-body">
-                  <form>
-                     <div class="form-group row">
-                        <label for="username" class="col-sm-2 col-form-label">Username:</label>
-                        <div class="col-sm-10">
-                           <input type="text" class="form-control" id="username" required autocomplete="on"
-                              placeholder="Enter Username">
-                        </div>
-                     </div>
-                     <div class="form-group row">
-                        <label for="inputPassword" class="col-sm-2 col-form-label">Password:</label>
-                        <div class="col-sm-10">
-                           <input type="password" class="form-control" id="inputPassword" required autocomplete="off"
-                              placeholder="Enter Password">
-                        </div>
-                     </div>
-                  </form>
-               </div>
-               <div class="modal-footer" style="display: flex; justify-content: center;">
-                  <button type="submit" class="btn btn-primary">Login</button>
-               </div>
-            </div>
-         </div>
-      </div>
-
-      <!-- Contact US modal  -->
-      <div class="modal fade" id="contactUsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-         <div class="modal-dialog">
-            <div class="modal-content">
-               <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Get in touch</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                     <span aria-hidden="true">&times;</span>
-                  </button>
-               </div>
-               <div class="modal-body">
-                  <p>Thank you for reaching out!!!</p>
-                  <p>Please enter your email and we will get back to you.</p>
-                  <form>
-                     <div class="form-group row">
-                        <label for="email" class="col-sm-2 col-form-label">Email:</label>
-                        <div class="col-sm-10">
-                           <input type="text" class="form-control" id="email" required autocomplete="on"
-                              placeholder="Enter your email id">
-                        </div>
-                     </div>
-                  </form>
-               </div>
-               <div class="modal-footer">
-                  <button type="button" class="btn btn-primary">Submit</button>
-               </div>
-            </div>
-         </div>
-      </div>
-
+      <!-- Footer -->
+      <footer class="header-footer" id="footer"></footer>
    </div>
 </body>
 

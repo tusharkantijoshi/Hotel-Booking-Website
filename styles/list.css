@@ -1,179 +1,82 @@
-main {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.hotel-img {
+.hotel-image-small {
   height: 200px;
   width: 250px;
 }
-
-.hotel-card-info {
-  padding-left: 3%;
-  margin-top: 2%;
-  text-decoration: none;
-}
-
-ul {
-  list-style: none;
+.hotel {
+  margin: 4% 5% 0% 5%;
+  background-color: lightgrey;
+  width: 40%;
+  float: left;
   display: flex;
-  justify-content: center;
+  justify-content: start;
+  align-content: center;
+  max-height: 200px;
 }
-
-li {
-  padding: 10px;
+.hotel:hover {
+  background-color: rosybrown;
+}
+#list-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin-top: 6%;
+  margin-bottom: 6%;
+}
+#list-map {
+  position: relative;
+  top: 0%;
+}
+#select-list {
+  position: absolute;
+  left: 42%;
   font-weight: bold;
 }
-
-#map-view {
-  display: none;
+#select-map {
+  position: absolute;
+  left: 50%;
+  font-weight: bold;
 }
-
-main > .list-view > #hotel-card {
-  margin: 2%;
-  background-color: lightgray;
-  width: 40%;
-  height: 200px;
+#pills-tab {
+  justify-content: center;
 }
-
-.list-view {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-}
-
-.list-view > #hotel-card,
-.list-view > a > #hotel-card {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  text-decoration: none;
-  color: black;
-}
-
-main > .list-view > #hotel-card:hover {
-  background-color: rosybrown;
+#map {
+  height: 82vh;
+  margin-top: 2%;
 }
 
 @media screen and (max-width: 576px) {
-  main {
-    overflow: auto;
+  #list-container {
+    margin-bottom: 150%;
   }
-  .view {
-    margin-top: 2%;
-    margin-bottom: 2%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+
+  #pills-tab {
+    padding-top: 15%;
   }
-  .list-view {
-    display: flex;
+
+  .hotel {
+    width: 90%;
     flex-direction: column;
-    align-content: center;
   }
 
-  .list-view > #hotel-list,
-  .list-view > a > #hotel-list {
-    height: 350px;
-    display: block;
-  }
-
-  .hotel-card-info {
-    background-color: lightgray;
-    height: 150px;
-    width: 250px;
-  }
-  .map-view {
+  .hotel-image-small {
     width: 100%;
-    height: 100%;
-  }
-  .map-view > img {
-    height: auto;
-    width: 80%;
-  }
-  #hotel-list {
-    flex: 1 0;
-    width: 250px;
-  }
-  .list-view > a {
-    width: 250px;
   }
 
-  .list-view > #hotel-list:hover {
-    background-color: rosybrown;
-  }
-  .hotel-card-info:hover,
-  .list-view > a > #hotel-list > .hotel-card-info:hover {
-    background-color: rosybrown;
-  }
-  .list-view > #hotel-list {
-    width: 250px;
-    background-color: lightgray;
-  }
-  .checked,
-  .fa-star-half-full {
-    color: orange;
+  #map-view > img {
+    width: 100%;
   }
 }
-@media screen and (max-width: 960px) and (min-width: 577px) {
-  main {
-    overflow: auto;
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  #pills-tab {
+    padding-top: 5%;
   }
-  .view {
-    margin-top: 2%;
-    margin-bottom: 2%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-  .list-view {
-    margin-left: 2%;
-    margin-right: 2%;
-    display: flex;
+
+  .hotel {
+    width: 90%;
     flex-direction: column;
-    align-content: flex-start;
   }
-  .map-view {
+
+  #map-view > img {
     width: 100%;
-    height: 100%;
-  }
-  .map-view > img {
-    height: 80%;
-    width: 80%;
-  }
-
-  .hotel-card {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-  }
-
-  .list-view > #hotel-list,
-  .list-view > a > #hotel-list {
-    margin: 2%;
-    background-color: lightgray;
-    width: 100%;
-    height: 200px;
-  }
-
-  .hotel-card-info {
-    background-color: lightgray;
-    width: 100%;
-  }
-
-  .hotel-card:hover {
-    background-color: rosybrown;
-  }
-
-  .list-view > #hotel-list > .hotel-card-info:hover,
-  .list-view > a > #hotel-list > .hotel-card-info:hover {
-    background-color: rosybrown;
-  }
-
-  .list-view > #hotel-list > .image:hover,
-  .list-view > a > #hotel-list > .image:hover {
-    background-color: rosybrown;
   }
 }

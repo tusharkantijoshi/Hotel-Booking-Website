@@ -19,181 +19,110 @@
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
+   <!-- Scripts -->
+   <script src="scripts/common.js" defer></script>
+   <script src="scripts/index.js" defer></script>
+
    <title>Index</title>
 </head>
 
 <body>
-   <div class="whole">
 
-      <!-- Loader -->
-      <div class="loaderDiv">
-         <iframe src="loader.html">Doesn't support</iframe>
-      </div>
+   <!-- Loader -->
+   <div id="loader"></div>
 
-      <!-- Header Div -->
-      <div class="header">
-         <div class="header">
-            <div id="h1"><img class="header-logo" src="assests/images/logo.png" alt="logo"></div>
-            <div id="h2">
-               <button type="button" class="btn btn-light btn-sm" data-toggle="modal" data-target="#staticBackdrop">
-                  LOGIN
-               </button>
+   <div class="main-container">
+      <!-- Header -->
+      <header class="header-footer" id="header"></header>
 
+      <!-- Main -->
+      <div id="index-container">
+         <div id="banner">
+
+            <!--Search Bar-->
+            <div id="search-bar">
+               <form autocomplete="off">
+                  <input id="search-input" type="search" placeholder="City" />
+               </form>
             </div>
          </div>
-      </div>
 
-      <!-- Content Div -->
-      <main>
-         <section>
-
-            <form class="city-search" action="">
-               <input type="text" placeholder="City" autocomplete="off" />
-            </form>
-            <div class="city-cards">
+         <!--City Cards-->
+         <div class="city-cards">
+            <div class="city-card-and-name-inner">
                <a href="list.html">
-                  <div class="image-container"> <img class="city-images"
-                        src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/a2/new-delhi.jpg" alt="Delhi" />
-                     <div class="overlay">Delhi</div>
-                  </div>
+                  <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/a2/new-delhi.jpg"
+                     class="city-image">
+                  <div class='overlay'><span>Delhi</span></div>
                </a>
-               <div class="image-container"> <img class="city-images"
-                     src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fc/f0/goa.jpg" alt="Goa" />
-                  <div class="overlay">Goa</div>
-               </div>
-               <div class="image-container"> <img class="city-images"
-                     src="https://media-cdn.tripadvisor.com/media/photo-s/0f/98/f7/df/charminar.jpg" alt="Hyderabad" />
-                  <div class="overlay">Hyderabad</div>
-               </div>
-               <div class="image-container"> <img class="city-images"
-                     src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/ac/kolkata-calcutta.jpg"
-                     alt="Kolkata" />
-                  <div class="overlay">Kolkata</div>
-               </div>
             </div>
 
-            <div class="city-cards" id="extra-cards">
-               <div class="image-container"> <img class="city-images"
-                     src="https://media-cdn.tripadvisor.com/media/photo-s/15/4d/46/b8/chennai-madras.jpg"
-                     alt="Chennai" />
-                  <div class="overlay">Chennai</div>
-               </div>
-               <div class="image-container"> <img class="city-images"
-                     src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fc/fc/agra.jpg" alt="Agra" />
-                  <div class="overlay">Agra</div>
-               </div>
-               <div class="image-container"> <img class="city-images"
-                     src="https://media-cdn.tripadvisor.com/media/photo-s/10/a3/3b/8a/screenshot-2017-09-12.jpg"
-                     alt="Jaipur" />
-                  <div class="overlay">Jaipur</div>
-               </div>
-               <div class="image-container"> <img class="city-images"
-                     src="https://media-cdn.tripadvisor.com/media/photo-s/0c/d2/2f/7a/palace-from-the-outside.jpg"
-                     alt="Bengaluru" />
-                  <div class="overlay">Bengaluru</div>
-               </div>
+            <div class="city-card-and-name-inner">
+
+               <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fc/f0/goa.jpg" class="city-image">
+               <div class='overlay'><span>Goa</span></div>
+
             </div>
 
-            <p> <a class="btn btn-secondary" href="#" id="view-more">View More>></a> </p>
+            <div class="city-card-and-name-inner">
 
-         </section>
-      </main>
+               <img src="https://media-cdn.tripadvisor.com/media/photo-s/0f/98/f7/df/charminar.jpg" class="city-image">
+               <div class='overlay'><span>Hyderabad</span></div>
 
-      <!-- Footer Div -->
-      <div class="footer">
+            </div>
 
-         <div class="contact">
-            <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#contactUsModal">Contact
-               Us</button>
+            <div class="city-card-and-name-inner">
+
+               <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/ac/kolkata-calcutta.jpg"
+                  class="city-image">
+               <div class='overlay'><span>Kolkata</span></div>
+
+            </div>
          </div>
 
-         <div class="copyright">
-            <p>
-               <span>&#169;</span> 2022 ROOM SEARCH PVT LTD
-            </p>
+         <div id="view-more-city-cards">
+            <div class="city-cards">
+               <div class="city-card-and-name-inner">
+
+                  <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/4d/46/b8/chennai-madras.jpg"
+                     class="city-image">
+                  <div class='overlay'><span>Chennai</span></div>
+
+               </div>
+
+               <div class="city-card-and-name-inner">
+
+                  <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fc/fc/agra.jpg" class="city-image">
+                  <div class='overlay'><span>Agra</span></div>
+
+               </div>
+
+               <div class="city-card-and-name-inner">
+
+                  <img src="https://media-cdn.tripadvisor.com/media/photo-s/10/a3/3b/8a/screenshot-2017-09-12.jpg"
+                     class="city-image">
+                  <div class='overlay'><span>Jaipur</span></div>
+
+               </div>
+
+               <div class="city-card-and-name-inner">
+
+                  <img src="https://media-cdn.tripadvisor.com/media/photo-s/0c/d2/2f/7a/palace-from-the-outside.jpg"
+                     class="city-image">
+                  <div class='overlay'><span>Bengaluru</span></div>
+
+               </div>
+            </div>
          </div>
 
-         <div class="social">
-            <a href="https://www.facebook.com/" target="_blank">
-               <img src="assests/images/facebook.png" alt="Facebook Logo">
-            </a>
-            <a href="https://www.instagram.com/" target="_blank">
-               <img src="assests/images/instagram.png" alt="Instagram Logo">
-            </a>
-            <a href="https://www.twitter.com/" target="_blank">
-               <img src="assests/images/twitter.png" alt="Twitter Logo">
-            </a>
-         </div>
-
+         <a id="view-more">
+            <button id="view-more-button" type="button" class="btn btn-secondary" onclick="viewMore()">View
+               More</button>
+         </a>
       </div>
 
-
-      <!-- Login Modal -->
-      <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
-         aria-labelledby="staticBackdropLabel" aria-hidden="true">
-         <div class="modal-dialog">
-            <div class="modal-content">
-               <div class="modal-header">
-                  <h5 class="modal-title" id="staticBackdropLabel">Please Login</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                     <span aria-hidden="true">&times;</span>
-                  </button>
-               </div>
-               <div class="modal-body">
-                  <form>
-                     <div class="form-group row">
-                        <label for="username" class="col-sm-2 col-form-label">Username:</label>
-                        <div class="col-sm-10">
-                           <input type="text" class="form-control" id="username" required autocomplete="on"
-                              placeholder="Enter Username">
-                        </div>
-                     </div>
-                     <div class="form-group row">
-                        <label for="inputPassword" class="col-sm-2 col-form-label">Password:</label>
-                        <div class="col-sm-10">
-                           <input type="password" class="form-control" id="inputPassword" required autocomplete="off"
-                              placeholder="Enter Password">
-                        </div>
-                     </div>
-                  </form>
-               </div>
-               <div class="modal-footer" style="display: flex; justify-content: center;">
-                  <button type="submit" class="btn btn-primary">Login</button>
-               </div>
-            </div>
-         </div>
-      </div>
-
-      <!-- Contact US modal  -->
-      <div class="modal fade" id="contactUsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-         <div class="modal-dialog">
-            <div class="modal-content">
-               <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Get in touch</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                     <span aria-hidden="true">&times;</span>
-                  </button>
-               </div>
-               <div class="modal-body">
-                  <p>Thank you for reaching out!!!</p>
-                  <p>Please enter your email and we will get back to you.</p>
-                  <form>
-                     <div class="form-group row">
-                        <label for="email" class="col-sm-2 col-form-label">Email:</label>
-                        <div class="col-sm-10">
-                           <input type="text" class="form-control" id="email" required autocomplete="on"
-                              placeholder="Enter your email id">
-                        </div>
-                     </div>
-                  </form>
-               </div>
-               <div class="modal-footer">
-                  <button type="button" class="btn btn-primary">Submit</button>
-               </div>
-            </div>
-         </div>
-      </div>
-
+      <!-- Footer-->
+      <footer class="header-footer" id="footer"></footer>
    </div>
 </body>
 
