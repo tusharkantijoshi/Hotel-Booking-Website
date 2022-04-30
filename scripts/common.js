@@ -85,6 +85,9 @@ let footer = () => {
     document.getElementById('footer').innerHTML += template;
 };
 
+
+loaderON();
+
 header();
 footer();
 
@@ -144,3 +147,4 @@ let checkLogin = () => {
 }
 
 checkLogin();
+
