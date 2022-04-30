@@ -20,7 +20,7 @@ let updatePrice = () => {
       totalPrice.value = "Rs.0";
 }
 
-//! HTTP request
+//! HTTP request for hotel details
 let sendHttpRequestHotel = () => {
    let xhr = new XMLHttpRequest();
 
@@ -59,7 +59,7 @@ let sendHttpRequestHotel = () => {
    xhr.send();
 }
 
-
+//! HTTP request for hotel photos
 let sendHttpRequestPhoto = () => {
    let xhr = new XMLHttpRequest();
 

@@ -1,3 +1,4 @@
+//! view more function
 let viewMore = () => {
    let viewMoreButton = document.getElementById("view-more-button");
    if (viewMoreButton.innerText == "View More") {

@@ -1,8 +1,10 @@
+//! for loader off
 let loaderOFF = () => {
     document.getElementById("loader").style.visibility = "hidden";
     document.getElementsByTagName("body")[0].style.visibility = "visible";
 }
 
+//! for loader on
 let loaderON = () => {
     document.getElementsByTagName("body")[0].style.visibility = "hidden";
     document.getElementById("loader").style.visibility = "visible";
