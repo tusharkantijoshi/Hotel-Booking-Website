@@ -10,3 +10,4 @@ let viewMore = () => {
    }
 }
 
+loaderOFF();

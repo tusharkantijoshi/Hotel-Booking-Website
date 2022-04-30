@@ -48,7 +48,7 @@ let sendHttpRequestHotel = () => {
             document.getElementById(i).classList.add("checked");
          }
       }
-
+      loaderOFF();
 
    });
 

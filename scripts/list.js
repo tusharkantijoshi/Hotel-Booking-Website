@@ -41,7 +41,7 @@ let sendHttpRequest = () => {
          });
 
          hotelList(list);
-
+         loaderOFF();
 
       }
    });

@@ -22,7 +22,7 @@ let sendHttpRequest = () => {
          document.getElementById("to-date").innerHTML = "<strong class='heading'>Check-out Date:</strong>&nbsp;" + url.get('toDate');
          document.getElementById("tariff").innerHTML = "<strong class='heading'>Tariff Breakdown:</strong>&nbsp;Rs.1000 x " + url.get('adult') + " Adults x " + days + " Nights";
          document.getElementById("amount").innerHTML = "<strong class='heading'>Total Amount:</strong>&nbsp;" + url.get('price');
-
+         loaderOFF();
       }
    });
 

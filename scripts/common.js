@@ -1,3 +1,14 @@
+let loaderOFF = () => {
+    document.getElementById("loader").style.visibility = "hidden";
+    document.getElementsByTagName("body")[0].style.visibility = "visible";
+}
+
+let loaderON = () => {
+    document.getElementsByTagName("body")[0].style.visibility = "hidden";
+    document.getElementById("loader").style.visibility = "visible";
+}
+
+
 //! Header template
 let header = () => {
     let template = `<a href="index.html" class="logo">
