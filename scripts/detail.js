@@ -1,27 +1,32 @@
-let url = new URLSearchParams(location.search);
+let urlParams = new URLSearchParams(window.location.search);
+const API_URL = "https://travel-advisor.p.rapidapi.com/";
+const travelAdvisorHost = "travel-advisor.p.rapidapi.com";
+const travelAdvisorKey = "f148d6a224msh30084722911c119p1916c8jsn34e6d92e3af2";
+const PRICE_PER_ROOM = 1000;
 
-//! function for price rate per day/person
+/* Function to update the Price field in the booking form */
 let updatePrice = () => {
-   let adult = document.getElementById("adult");
-   let totalPrice = document.getElementById("price");
-   let toDate = document.getElementById("toDate");
-   let fromDate = document.getElementById("fromDate");
+   let adultElement = document.getElementById("adult");
+   let totalPriceElement = document.getElementById("price");
+   let toDateElement = document.getElementById("toDate");
+   let fromDateElement = document.getElementById("fromDate");
 
-   let toDateValue = new Date(toDate.value);
-   let fromDateValue = new Date(fromDate.value);
+   let toDateValue = new Date(toDateElement.value);
+   let fromDateValue = new Date(fromDateElement.value);
 
-   toDate.min = fromDate.value;
+   toDateElement.min = fromDateElement.value;
 
    let days = (toDateValue - fromDateValue) / (24 * 60 * 60 * 1000);
 
-   if (adult.value && toDate.value && fromDate.value)
-      totalPrice.value = "Rs. " + parseInt(adult.value) * 1000 * days;
+   if (adultElement.value && toDateElement.value && fromDateElement.value)
+      totalPriceElement.value = "Rs. " + parseInt(adultElement.value) * PRICE_PER_ROOM * days;
    else
-      totalPrice.value = "Rs.0";
+      totalPriceElement.value = "Rs.0";
+
 }
 
-//! HTTP request for hotel details
-let sendHttpRequestHotel = () => {
+/* This function will fetch the details of the hotel from the API */
+let fetchHotelDetailAPI = () => {
    let xhr = new XMLHttpRequest();
 
    xhr.addEventListener("readystatechange", function () {
@@ -48,19 +53,17 @@ let sendHttpRequestHotel = () => {
             document.getElementById(i).classList.add("checked");
          }
       }
-      loaderOFF();
-
    });
 
-   xhr.open("GET", "https://travel-advisor.p.rapidapi.com/" + "hotels/get-details?lang=en_US&location_id=" + url.get('id'));
-   xhr.setRequestHeader("x-rapidapi-host", "travel-advisor.p.rapidapi.com");
-   xhr.setRequestHeader("x-rapidapi-key", "f148d6a224msh30084722911c119p1916c8jsn34e6d92e3af2");
+   xhr.open("GET", API_URL + "hotels/get-details?lang=en_US&location_id=" + urlParams.get('id'));
+   xhr.setRequestHeader("x-rapidapi-host", travelAdvisorHost);
+   xhr.setRequestHeader("x-rapidapi-key", travelAdvisorKey);
 
    xhr.send();
 }
 
-//! HTTP request for hotel photos
-let sendHttpRequestPhoto = () => {
+
+let fetchHotelPhotosAPI = () => {
    let xhr = new XMLHttpRequest();
 
    xhr.addEventListener("readystatechange", function () {
@@ -82,18 +85,18 @@ let sendHttpRequestPhoto = () => {
             div.appendChild(image);
             carouselParentElement.appendChild(div);
          }
-         LoaderOFF();
+         disableLoader();
       }
    });
-   xhr.open("GET", "https://travel-advisor.p.rapidapi.com/" + "photos/list?lang=en_US&location_id=" + url.get('id'));
-   xhr.setRequestHeader("x-rapidapi-host", "travel-advisor.p.rapidapi.com");
-   xhr.setRequestHeader("x-rapidapi-key", "f148d6a224msh30084722911c119p1916c8jsn34e6d92e3af2");
+   xhr.open("GET", API_URL + "photos/list?lang=en_US&location_id=" + urlParams.get('id'));
+   xhr.setRequestHeader("x-rapidapi-host", travelAdvisorHost);
+   xhr.setRequestHeader("x-rapidapi-key", travelAdvisorKey);
 
    xhr.send();
 }
 
 let idElement = document.getElementById("id");
-idElement.value = url.get('id');
+idElement.value = urlParams.get('id');
 
-sendHttpRequestHotel();
-sendHttpRequestPhoto();
+fetchHotelDetailAPI();
+fetchHotelPhotosAPI();
